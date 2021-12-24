@@ -36,10 +36,7 @@ denz.autoReconnect = ReconnectMode.onConnectionLost
         })
      
       await denz.connect({ timeoutMs: 30 * 1000 });
- denz.sendMessage(`${settings.NomorOwner}@s.whatsapp.net`, `*Hai Owner ${settings.NamaBot}, Bot Telah Berhasil Tersambung Pada Nomor Ini*\n────────────────────\n\`\`\`${JSON.stringify(denz.user, null, 2)}\`\`\`\n────────────────────\n*Jika Ada Kendala Error/Bot Tidak Merespon Silahkan Hubungi Developer Bot Diatas, Terimakasih*`, MessageType.text)
-	console.log(color('|WRN|', 'yellow'), color('Sending bot info to bot owner', 'cyan'))
-)
-      
+ 
     denz.on('connecting', () => {
 		console.log(color('|TRM|'), color('Connecting...', 'cyan'))
 		})
