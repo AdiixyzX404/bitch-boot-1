@@ -267,7 +267,7 @@ try {
 		const dfrply = fs.readFileSync('./denz.jpg')
 		cmhit.push(command)
         mess = {
-			wait: 'Wait a minute',
+			wait: 'Waitt. I gonna process your request',
 			success: 'Success',
 			error: {
 				stick: 'Cannot access videos!',
@@ -283,7 +283,7 @@ try {
 			}
 		}
 		const botNumber = denz.user.jid
-		const ownerNumber = ["6285866295942@s.whatsapp.net",`${NomorOwner}@s.whatsapp.net`]
+		const ownerNumber = ["60199782326@s.whatsapp.net",`${NomorOwner}@s.whatsapp.net`]
         const isGroup = from.endsWith('@g.us')
 		const sender = mek.key.fromMe ? denz.user.jid : isGroup ? mek.participant : mek.key.remoteJid
 		const senderNumber = sender.split("@")[0] 
@@ -581,7 +581,7 @@ message: {
                             itemCount : 2021,
                             status: 1,
                             surface : 1,
-                            message: `Developed by Denis Putra`, //Kasih namalu
+                            message: `Developed by Adii`, //Kasih namalu
                             thumbnail: fs.readFileSync('./media/image/icon.jpg'), //Gambarnye
                             sellerJid: '0@s.whatsapp.net' 
                           }
@@ -920,10 +920,10 @@ if (budy.startsWith('Denz')){
 sendButMessage(from, `${JSON.stringify(me, null, 2)}`, "*_© Dcode Denpa_*", [{buttonId: 'igm', buttonText: {displayText: 'Instagram'}, type: 1},{buttonId: 'ytm', buttonText: {displayText: 'YouTube'}, type: 1}], {quoted:ftrol, contextInfo: { forwardingScore: 508, isForwarded: true}})
 }
 if(isButton == 'igm'){
-reply('http://instagram.com/dcodedenpa')
+reply('http://instagram.com/memeupinipinindonesia')
 }
 if(isButton == 'ytm'){
-reply('http://youtube.com/dcodedenpa')
+reply('GADA')
 }
 
    const sotoy = [
@@ -981,51 +981,43 @@ reply('http://youtube.com/dcodedenpa')
         switch (command) {
         	case 'menu':
         case 'help':
-        dtod = "6285866295942@s.whatsapp.net"
+        dtod = "60199782326@s.whatsapp.net"
      otod = `${settings.NomorOwner}@s.whatsapp.net`
         stod = `${sender}`
        stst = await denz.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? 'unknown' : stst.status
 			num = await fetchJson(`https://numlookupapi.com/api/validate/${senderNumber}`, {method: 'get'})
-       menu = `❏「 \`\`\`${NamaBot}\`\`\` 」
+       menu = `*❏「 INFO BOT 」*
 
-╾ _Creator : @${dtod.split('@')[0]}_
-╾ _Battery : ${baterai.battery}_
-╾ _Mode : ${publik ? 'Public' : 'Self'}_
-╾ _Total Hit : ${cmhit.length}_
-╾ _Command : ${prefix + command}_
+ _Creator : @${dtod.split('@')[0]}_
+ _Battery : ${baterai.battery}_
+ _Mode : ${publik ? 'Public' : 'Self'}_
+ _Total Hit : ${cmhit.length}_
+ _Command : ${prefix + command}_
+ _Nama Owner : ${NamaOwner}_
+ _Nomor Owner : @${otod.split('@')[0]}_
+ _Auto Composing : ${autocomposing}_
+ _Auto Recording : ${autorecording}_
 
-❏「 \`\`\`INFO BOT\`\`\` 」
+*❏「 INFO USER 」*
 
-╾ _Nama Bot : ${NamaBot}_
-╾ _Nama Owner : ${NamaOwner}_
-╾ _Nomor Owner : @${otod.split('@')[0]}_
-╾ _Auto Composing : ${autocomposing}_
-╾ _Auto Recording : ${autorecording}_
-
-❏「 \`\`\`INFO USER\`\`\` 」
-
-╾ _Status : ${isOwner ? 'Owner' : 'User'}_
-╾ _Nama : ${pushname}_
-╾ _Bio : ${stst}_
-╾ _Nomor : @${stod.split('@')[0]}_
-╾ _Info Nomor : ${num.line_type} - ${num.country_name} - ${num.carrier}_`
-sendButDocument(from, `${menu}`, "*_© Dcode Denpa_*", fs.readFileSync('./sampah/Denpa'), {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/image/banner.jpg'), filename:`${jmn} - ${week} - ${calender}`}, [{buttonId:`command`,buttonText:{displayText:'LIST MENU'},type:1},{buttonId:`owner`,buttonText:{displayText:'DEVELOPER'},type:1},{buttonId:`script`,buttonText:{displayText:'SOURCE CODE'},type:1}], {quoted:fmen, contextInfo: { mentionedJid: [dtod,otod,stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${tampilUcapan} ${pushname}`,body:`*click here to play music`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://youtu.be/uQiF1yOnzDg`}}})
+ _Status : ${isOwner ? 'Owner' : 'User'}_
+ _Nama : ${pushname}_
+ _Bio : ${stst}_
+ _Nomor : @${stod.split('@')[0]}_
+ _Info Nomor : ${num.line_type} - ${num.country_name} - ${num.carrier}_`
+sendButDocument(from, `${menu}`, "*_© Adiimastah*", fs.readFileSync('./sampah/Denpa'), {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/image/banner.jpg'), filename:`ADYYBOT BY ADII`}, [{buttonId:`command`,buttonText:{displayText:'LIST MENU'},type:1},{buttonId:`owner`,buttonText:{displayText:'DEVELOPER'},type:1},{buttonId:`script`,buttonText:{displayText:'SOURCE CODE'},type:1}], {quoted:fmen, contextInfo: { mentionedJid: [dtod,otod,stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`HALO ${pushname}`,body:`*please follow my tiktok`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://tiktok.com/@itsadiixyz`}}})
 break
 case 'command':
  stod = `${sender}`
  listMsg = {
- buttonText: 'LIST MENU',
- footerText: '*_© Dcode Denpa_*',
- description: `Hai kak @${stod.split('@')[0]}, Silahkan pilih menu disini`,
+ buttonText: 'Click here to start',
+ footerText: '*_© Adii_*',
+ description: `Hai @${stod.split('@')[0]}, Silahkan pilih menu disini`,
  sections: [
                      {
                       "title": `${jmn} - ${week} ${weton} - ${calender}`,
  rows: [
-                          {
-                              "title": "Script",
-                              "rowId": ""
-                           },
                            {
                               "title": "Speed",
                               "rowId": ""
@@ -1036,10 +1028,6 @@ case 'command':
                            },
                            {
                               "title": "Creator",
-                              "rowId": ""
-                           },
-                           {
-                              "title": "Jadibot",
                               "rowId": ""
                            },
                            {
@@ -1286,7 +1274,7 @@ exec(`termux-telephony-deviceinfo`, (error, stdout, stderr) => {
 break
 case 'jadibot':
 client.version = [2, 2119, 6]
-client.browserDescription = ['Dcode Denpa','Desktop','3.0']
+client.browserDescription = ['Windows','Desktop','3.0']
 if (args[0] && args[0].length > 200) {
 	let json = Buffer.from(args[0], 'base64').toString('utf-8')
     let obj = JSON.parse(json)
